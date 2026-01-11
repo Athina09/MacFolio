@@ -138,6 +138,65 @@ export const dockItems = [
   { name: "Trash", icon: "/images/trash.png", window: null },
 ];
 
+// Dock Apps (macOS style)
+export const dockApps = [
+  {
+    id: "finder",
+    name: "Projects",
+    icon: "/images/finder.png",
+    canOpen: true,
+  },
+  {
+    id: "photos",
+    name: "Gallery",
+    icon: "/images/photos.png",
+    canOpen: true,
+  },
+  {
+    id: "contact",
+    name: "Contact",
+    icon: "/images/contact.png",
+    canOpen: true,
+  },
+  {
+    id: "terminal",
+    name: "Skills",
+    icon: "/images/terminal.png",
+    canOpen: true,
+  },
+  {
+    id: "safari",
+    name: "Blog",
+    icon: "/images/safari.png",
+    canOpen: true,
+  },
+  {
+    id: "resume",
+    name: "Resume",
+    icon: "/images/pdf.png",
+    canOpen: true,
+  },
+  {
+    id: "trash",
+    name: "Archive",
+    icon: "/images/trash.png",
+    canOpen: false,
+  },
+];
+
+// Window Configuration
+export const INITIAL_Z_INDEX = 10;
+
+export const WINDOW_CONFIG = {
+  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+};
+
 // Blog Posts (for Safari window)
 export const blogPosts = [
   {
