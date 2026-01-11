@@ -59,14 +59,19 @@ const Welcome = () => {
   const subtitleRef = useRef(null);
 
   useGSAP(() => {
-    setupTextHover(titleRef.current, "title");
-    setupTextHover(subtitleRef.current, "subtitle");
+    const cleanupTitle = setupTextHover(titleRef.current, "title");
+    const cleanupSubtitle = setupTextHover(subtitleRef.current, "subtitle");
+
+    return () => {
+      cleanupTitle?.();
+      cleanupSubtitle?.();
+    };
   });
 
   return (
     <section id="welcome">
       <p ref={subtitleRef} className="text-2xl font-georama opacity-80">
-        {renderText("Hey, I'm Athina! Welcome to my", "letter-subtitle", 200)}
+        {renderText("Hey, I'm Athina! Welcome to my", "letter-subtitle", 100)}
       </p>
       <h1 ref={titleRef} className="text-8xl font-georama font-bold italic mt-2">
         {renderText("portfolio", "letter-title", 400)}
