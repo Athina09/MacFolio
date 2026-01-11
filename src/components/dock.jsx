@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { dockApps } from "../constants";
 import { useGSAP } from "@gsap/react";
-import useWindowStore from "../store/window";
+import { useWindowStore } from "../store";
 import { Tooltip } from "react-tooltip";
 
 const Dock = () => {
@@ -62,8 +62,6 @@ const Dock = () => {
     } else {
       openWindow(app.id);
     }
-
-    console.log(windows);
   };
 
   return (

@@ -9,6 +9,10 @@ const useWindowStore = create(
 
     openWindow: (windowKey, data = null) =>
       set((state) => {
+        if (!Object.hasOwn(state.windows, windowKey)) {
+          console.error(`openWindow: invalid windowKey "${windowKey}"`);
+          return;
+        }
         const win = state.windows[windowKey];
         win.isOpen = true;
         win.zIndex = state.nextZIndex;
@@ -18,6 +22,10 @@ const useWindowStore = create(
 
     closeWindow: (windowKey) =>
       set((state) => {
+        if (!state.windows || !state.windows[windowKey]) {
+          console.error(`closeWindow: invalid windowKey "${windowKey}"`);
+          return;
+        }
         const win = state.windows[windowKey];
         win.isOpen = false;
         win.zIndex = INITIAL_Z_INDEX;
@@ -26,6 +34,9 @@ const useWindowStore = create(
 
     focusWindow: (windowKey) =>
       set((state) => {
+        if (!state.windows || !state.windows[windowKey]) {
+          return;
+        }
         const win = state.windows[windowKey];
         win.zIndex = state.nextZIndex;
         state.nextZIndex++;

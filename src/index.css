@@ -113,7 +113,7 @@
     }
 
     .dock-tooltip {
-      @apply !py-1.5 !px-3 !w-fit !text-center !text-xs !font-medium !rounded-md !bg-gray-800/90 !text-white !shadow-lg !backdrop-blur-md;
+      @apply py-1.5! px-3! w-fit! text-center! text-xs! font-medium! rounded-md! bg-gray-800/90! text-white! shadow-lg! backdrop-blur-md!;
     }
   }
 
