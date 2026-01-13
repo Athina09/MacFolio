@@ -90,28 +90,13 @@
       @apply bg-white/20 backdrop-blur-md rounded-2xl p-2 flex items-end gap-2;
     }
 
-    .dock-item {
-      @apply relative flex flex-col items-center cursor-pointer transition-transform duration-200;
-
-      &:hover {
-        @apply -translate-y-2;
-      }
-
-      &:hover .dock-label {
-        @apply opacity-100 -translate-y-2;
-      }
-    }
-
     .dock-icon {
       @apply size-14 3xl:size-20 object-cover object-center;
       transform-origin: bottom center;
       will-change: transform;
     }
 
-    .dock-label {
-      @apply absolute -top-8 bg-gray-800/80 text-white text-xs px-2 py-1 rounded-md opacity-0 transition-all duration-200 whitespace-nowrap;
-    }
-
+    /* !important required to override react-tooltip's inline styles and CSS custom properties */
     .dock-tooltip {
       @apply py-1.5! px-3! w-fit! text-center! text-xs! font-medium! rounded-md! bg-gray-800/90! text-white! shadow-lg! backdrop-blur-md!;
     }
