@@ -1,1 +1,1 @@
-export { default as useWindowStore } from "./window";
+export { default as useWindowStore } from "./window.jsx";

@@ -15,8 +15,15 @@ const useWindowStore = create(
         }
         const win = state.windows[windowKey];
         win.isOpen = true;
+        win.isMinimized = false;
         win.zIndex = state.nextZIndex;
         win.data = data ?? win.data;
+        if (data?.animationType) {
+          win.animationType = data.animationType;
+        }
+        if (data?.position) {
+          win.position = data.position;
+        }
         state.nextZIndex++;
       }),
 
@@ -28,8 +35,11 @@ const useWindowStore = create(
         }
         const win = state.windows[windowKey];
         win.isOpen = false;
+        win.isMinimized = false;
         win.zIndex = INITIAL_Z_INDEX;
         win.data = null;
+        win.animationType = null;
+        win.position = null;
       }),
 
     focusWindow: (windowKey) =>
@@ -38,6 +48,26 @@ const useWindowStore = create(
           return;
         }
         const win = state.windows[windowKey];
+        win.zIndex = state.nextZIndex;
+        state.nextZIndex++;
+      }),
+
+    minimizeWindow: (windowKey) =>
+      set((state) => {
+        if (!state.windows || !state.windows[windowKey]) {
+          return;
+        }
+        const win = state.windows[windowKey];
+        win.isMinimized = true;
+      }),
+
+    restoreWindow: (windowKey) =>
+      set((state) => {
+        if (!state.windows || !state.windows[windowKey]) {
+          return;
+        }
+        const win = state.windows[windowKey];
+        win.isMinimized = false;
         win.zIndex = state.nextZIndex;
         state.nextZIndex++;
       }),

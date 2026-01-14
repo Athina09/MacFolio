@@ -1,7 +1,7 @@
 // Personal Information
 export const personalInfo = {
   name: "Athina Karthikeyan",
-  title: "Software Integration Engineer",
+  title: "Aspiring Software Engineer",
   location: "Chennai, Tamil Nadu",
   phone: "+91 6379479639",
   email: "athinax09@gmail.com",
@@ -47,40 +47,20 @@ export const experience = [
 // Projects
 export const projects = [
   {
-    name: "Social Media Simulation",
-    tech: "C++, STL, File I/O",
-    description: "Console-based simulation with profiles, messaging, friend system & file persistence.",
-    image: "/images/project-1.png",
-  },
-  {
-    name: "AI Image Generator MVP",
-    tech: "Python, Hugging Face, AWS",
-    description: "Lightweight image generation using Stable Diffusion on AWS Lambda.",
-    image: "/images/project-2.png",
-  },
-  {
-    name: "Ollama AI Chat System",
-    tech: "Python, Ollama, LLMs",
-    description: "Private AI chatbot system using Ollama and open-source LLMs (Mistral, Gemma).",
-    image: "/images/project-3.png",
-  },
-  {
-    name: "Library Management System",
-    tech: "C++",
-    description: "Tracks books, borrowing, and users with file-based storage.",
+    name: "Dice Challenge",
+    tech: "JavaScript, HTML, CSS",
+    description: "Interactive dice game challenge with fun gameplay mechanics.",
     image: "/images/folder.png",
+    liveLink: "https://athina09.github.io/Dice-challenge/",
+    githubLink: "https://lnkd.in/gwmdttrd",
   },
   {
-    name: "Rocket Trajectory Calculator",
-    tech: "Excel, Newtonian Mechanics",
-    description: "Spreadsheet tool applying physics formulas to model rocket movement.",
+    name: "Apple Clone",
+    tech: "React, TailwindCSS, GSAP, Three.js",
+    description: "An Apple clone website using React with TailwindCSS, GSAP animations and Three.js.",
     image: "/images/folder.png",
-  },
-  {
-    name: "Drug Addiction Recovery System",
-    tech: "C++",
-    description: "Tool for medication tracking, therapy scheduling, and billing.",
-    image: "/images/folder.png",
+    liveLink: "https://apple-clone-five-delta.vercel.app/",
+    githubLink: "https://github.com/Athina09/AppleClone",
   },
 ];
 
@@ -188,37 +168,23 @@ export const dockApps = [
 export const INITIAL_Z_INDEX = 10;
 
 export const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: { isOpen: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  photos: { isOpen: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  contact: { isOpen: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  terminal: { isOpen: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  safari: { isOpen: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  resume: { isOpen: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  trash: { isOpen: false, isMinimized: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 // Blog Posts (for Safari window)
 export const blogPosts = [
   {
-    title: "Building Space Mission Software with GMAT",
-    date: "August 2025",
-    excerpt: "My experience as a Project Intern working on orbital simulation and trajectory modeling...",
-    image: "/images/blog1.png",
-    link: "#",
-  },
-  {
-    title: "Contributing to Open Source: GSSOC Journey",
+    title: "Setting up Xcode",
     date: "2025",
-    excerpt: "Lessons learned from debugging, testing, and collaborating in open source projects...",
-    image: "/images/blog2.png",
-    link: "#",
-  },
-  {
-    title: "AI Image Generation with Stable Diffusion on AWS",
-    date: "2025",
-    excerpt: "How I built a lightweight image generator using serverless architecture...",
-    image: "/images/blog3.png",
-    link: "#",
+    excerpt: "Read my latest thoughts and insights on Medium...",
+    image: null,
+    link: "https://medium.com/p/f515e6697e2d",
   },
 ];
 

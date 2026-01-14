@@ -6,7 +6,7 @@ import { Tooltip } from "react-tooltip";
 
 const Dock = () => {
   const dockRef = useRef(null);
-  const { windows, openWindow, closeWindow } = useWindowStore();
+  const { windows, openWindow, closeWindow, restoreWindow } = useWindowStore();
 
   useGSAP(() => {
     const dock = dockRef.current;
@@ -57,9 +57,14 @@ const Dock = () => {
 
     const window = windows[app.id];
 
-    if (window.isOpen) {
+    if (window.isMinimized) {
+      // Restore minimized window
+      restoreWindow(app.id);
+    } else if (window.isOpen) {
+      // Close open window
       closeWindow(app.id);
     } else {
+      // Open closed window
       openWindow(app.id);
     }
   };

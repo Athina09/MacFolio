@@ -1,4 +1,10 @@
 export { default as Navbar } from './Navbar'
 export { default as Welcome } from './Welcome'
 export { default as Dock } from './dock'
-
+export { default as WindowControls } from './WindowControls'
+export { default as TerminalWindow } from './Terminal'
+export { default as SafariWindow } from './Safari'
+export { default as FinderWindow } from './Finder'
+export { default as PhotosWindow } from './Photos'
+export { default as ContactWindow } from './Contact'
+export { default as ResumeWindow } from './Resume'
