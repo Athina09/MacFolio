@@ -1,10 +1,11 @@
 import WindowWrapper from "#hoc/WindowWrapper.jsx";
+import WindowControls from "./WindowControls.jsx";
 
 const Terminal = () => {
   return (
     <>
-      <div id="window-header">
-        <p>Window Controls</p>
+      <div className="window-header">
+        <WindowControls target="terminal" />
         <h2>Tech Stack</h2>
       </div>
 
@@ -18,6 +19,6 @@ const Terminal = () => {
   );
 };
 
-const TerminalWindow = WindowWrapper(Terminal, 'terminal')
+const TerminalWindow = WindowWrapper(Terminal, 'terminal');
 
-export default Terminal;
+export default TerminalWindow;
